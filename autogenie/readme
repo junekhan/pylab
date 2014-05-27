@@ -1,0 +1,25 @@
+1.文件清单:
+  builder.ini
+  builder.exe 
+  mail_template_failure.txt
+  mail_template_sucess.txt
+  
+  
+2.使用方式:
+  A.根据实际情况修改builder.ini中的配置项,以下为必须修改项:
+    genie_base_dir
+    qt_runtime_dir
+    admin_email
+    git_path
+    
+  B.可选修改项说明:
+    win32_plugins 最初构建的VC工程,可以添加新项
+    mingw32_plugins 需要构建的QT工程,可以添加新项,添加时请注意依赖次序,被依赖项请放置到相对往前的位置
+    files_check_list 打包前需要校验的文件项
+    pass_in_conf 如果配置为1,则需要配置后面 password项, 否则程序在运行时会提示从键盘输入密码以保证隐私
+    build_tools.enable 如果配置为1,则所有构建工具都将使用后面配置的内容,否则使用环境变量中的构建工具。推荐在此配置。
+    
+  C.其它重要说明：
+    由于目前没有解决git操作时，交互输入密码的问题，所以请修改 Project/.git/config 文件中的url配置项,修改为如下格式 url = http://user:password@git.siteview.com/gitblit-1.4.0/r/GenieWindow
+    最好从命令行中运行该程序,在异常发生时方便截取日志
+    

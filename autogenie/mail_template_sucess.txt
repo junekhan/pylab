@@ -1,0 +1,2 @@
+Hi %(admin)s,
+    It's glad to tell you the <%(project)s> has been successfully built and deployed. Please check this file: <%(deployfile)s>

@@ -1,0 +1,3 @@
+Greetings %(author)s,
+    You're receiving this mail because of a recent failure on building <%(project)s>. According to the Git log, it's highly suspected that the last commit you did on <%(module)s> has caused this.
+    Check build logs attached for more information. Any furthur question, please contact <%(admin)s>.
