@@ -100,7 +100,7 @@ class AutoReport(object):
         if os.path.exists(self.logfile_name):
             self.logfile = open(self.logfile_name, 'r')
             content = self.logfile.read()
-            if re.search("^cat /proc/meminfo", content):
+            if re.search("cat /proc/meminfo", content):
                 self.log_snippets = content.split("cat /proc/meminfo")
             else:
                 self.log_snippets = content.split("PID  Uid        VSZ Stat Command")

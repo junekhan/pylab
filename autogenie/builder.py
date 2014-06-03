@@ -252,6 +252,7 @@ class GenieBuilder(object):
         self.get_source()
         ret = self.compile()
         if ret:
+            pass
             self.mail_on_error(ret)
         if not self.package():
             print "Packaging failed!"
