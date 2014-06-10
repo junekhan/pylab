@@ -1,0 +1,63 @@
+[base]
+#genie base dir
+genie_base_dir = D:\root\test\GenieWindow
+
+#Qt Runtime dir
+qt_runtime_dir = D:\transport\Qt5Runtime\mingwrelease
+
+#plugin base dir
+plugin_dir = plugins
+
+#Win32 plugins to be build, delimited by ':'
+win32_plugins = GeniePlugin_VC
+
+#MinGW32 plugins to be build, delimited by ':'
+mingw32_plugins	= SvtNetworkTool:DiagnosePlugin:DragonNetTool:genie2_qrcode:GeniePlugin_Airprint:GeniePlugin_Internet:topology:GeniePlugin_MapV2\howl:GeniePlugin_MapV2\dlna:GeniePlugin_MapV2:GeniePlugin_MyMedia\DLNACore:GeniePlugin_MyMedia\VLCCore:GeniePlugin_MyMedia\Src:GeniePlugin_LPC:GeniePlugin_NetworkProblem:GeniePlugin_Resource:GeniePlugin_RouterConfiguration:GeniePlugin_Statistics:GeniePlugin_Ui:GeniePlugin_Update2:GeniePlugin_Wireless:WSetupApiPlugin:readyShareFileChecker:InternetDaemon:GeniePlugin_WirelessExport:genie_module:..\genie2_tray:..\launch
+
+#destination files check list, delimited by ':'
+files_check_list = genie2_tray.exe:InternetDaemon.exe:NETGEARGenieDaemon.exe:NETGEARGenieDaemon64.exe:readyShareFileChecker.exe:airprintdll.dll:ComputerDetails.dll:DiagnoseDll.dll:DragonNetTool.dll:Genie.dll:GeniePlugin_Airprint.dll:GeniePlugin_Internet.dll:GeniePlugin_Map.dll:GeniePlugin_NetworkProblem.dll:GeniePlugin_ParentalControl.dll:GeniePlugin_Resource.dll:GeniePlugin_RouterConfiguration.dll:GeniePlugin_Statistics.dll:GeniePlugin_Ui.dll:GeniePlugin_Wireless.dll:InnerPlugin_Update.dll:InnerPlugin_WirelessExport.dll:NetcardApi.dll:SvtNetworkTool.dll:SVTUtils.dll:WiFiApi.dll:WSetupApiPlugin.dll:WSetupDll.dll
+
+[mail]
+#smtp server address
+smtp_server = smtp.exmail.qq.com:465
+
+#email of administrator
+admin_email = jun.han@dragonflow.com
+
+#if SSL is supported
+SSL_enable = 1
+
+#whether email password configured in this file(value 1) or you'll type it in the terminal(value 0),
+pass_in_conf = 0
+
+#this item should not be concerned about while pass_in_conf is disabled
+<<<<<<< HEAD
+password = 654321
+=======
+password = 123456
+>>>>>>> cbe520a295d8be3280f1fd11238cd72ca1a70449
+
+[deploy]
+#deploy path
+deploy_path = \\192.168.9.14\backup\Package\Windows
+
+[git]
+#git path
+git_path = C:\Program Files (x86)\Git\bin
+
+[build_tools]
+#enable all the build tools configured here, or else tools found in the PATH env will be used
+enable = 1
+
+#vc project tools
+devenv = C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe
+
+#qmake project tools
+qmake = C:\Qt\Qt5.1.1\5.1.1\mingw48_32\bin\qmake.exe
+
+#mingw32-make project tools
+mingw32-make = C:\Qt\Qt5.1.1\Tools\mingw48_32\bin\mingw32-make.exe
+
+#nsis tool
+makensis = C:\Program Files (x86)\NSIS\makensis.exe
+
