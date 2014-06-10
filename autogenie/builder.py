@@ -121,7 +121,7 @@ class GenieBuilder(object):
         email['To'] = self.admin_email
         email['Subject'] = 'Build Report: SUCCESS'
 
-        fp = open(os.path.join(self.work_dir, 'mail_template_sucess.txt'), 'r')
+        fp = open(os.path.join(self.work_dir, 'mail_template_success.txt'), 'r')
         mail_template = fp.read() % {'project': self.genie_base_dir.split('\\')[-1],
                                      'admin': self.admin_email,
                                      'deployfile': self.deploy_path + "\\" + os.path.basename(self.tarball_path)}
