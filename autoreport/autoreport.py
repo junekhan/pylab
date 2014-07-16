@@ -100,10 +100,15 @@ class AutoReport(object):
         if os.path.exists(self.logfile_name):
             self.logfile = open(self.logfile_name, 'r')
             content = self.logfile.read()
-            if re.search("cat /proc/meminfo", content):
-                self.log_snippets = content.split("cat /proc/meminfo")
-            else:
-                self.log_snippets = content.split("PID  Uid        VSZ Stat Command")
+            self.log_snippets = re.findall(u"(MemTotal:[\s\S]*?(?=MemTotal:)|MemTotal:[\s\S]+)", content)
+
+            # snippets1 = content.split("cat /proc/meminfo")
+            # snippets2 = content.split("PID  Uid        VSZ Stat Command")
+            # self.log_snippets = snippets1 if len(snippets1) > len(snippets2) else snippets2
+            # if re.search("cat /proc/meminfo", content):
+            #     self.log_snippets = content.split("cat /proc/meminfo")
+            # else:
+            #     self.log_snippets = content.split("PID  Uid        VSZ Stat Command")
             self.logfile.close()
             self.logfile = None
 
